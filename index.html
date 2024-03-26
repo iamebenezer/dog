@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <style>
     @font-face {
@@ -65,8 +66,26 @@
             mobileMenu.classList.toggle('hidden');
         });
     </script>
+    <style>
+         @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .floating-element {
+    animation: float 3s ease-in-out infinite;
+  }
+    </style>
     <section class="py-24" style="background-image: url(bg-2.png); height:fit-content; background-repeat: no-repeat; background-size: cover;">
-                <div class=" mx-4 grid grid-cols-1 place-items-center gap-8 md:grid-cols-2 md:mx-12">
+                <div class=" mx-4 grid grid-cols-1 place-items-center gap-8 md:grid-cols-2 md:mx-12" data-aos="fade-up"
+                data-aos-duration="1500">
                     <div>
                         <h1 class="text-center md:text-start text-white text-[40px] md:text-[50px]">WELCOME TO <BR> DOGWIFBISCUIT</h1>
                             <p class="text-white text-[30px] text-center md:text-start hidden md:flex">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque assumenda nemo nihil.</p> 
@@ -76,7 +95,7 @@
 
                         </div>
                     <div>
-                   <img src="/logo.png" alt="">
+                   <img src="/logo.png" class="floating-element" alt="">
                     </div>
                     <p class="text-white text-[25px] text-center md:hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque assumenda nemo nihil.</p> 
                         <a href="" class="md:hidden bg-white px-4 text-[15px] text-center py-2 rounded-xl" style="font-family: head;"> Buy $DWB</a>
@@ -85,16 +104,16 @@
     
     </section>
 
-    <section class="p-12 h-96" style="background-image: url(/bg-3.png); background-size: contain;">
-                <div class="flex justify-center flex-col items-center">
+    <section class="p-12 h-96" style="background-image: url(/bg-3.png); background-size: contain;" id="about">
+                <div class="flex justify-center flex-col items-center" data-aos="fade-up">
                     <h1 class="text-center text-white text-[30px]">ABOUT</h1>
-                    <p class="text-white text-[25px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia corporis soluta adipisci modi? Consequatur debitis ipsa fugit culpa, nisi recusandae.</p>
+                    <p class="text-white text-[25px] text-center"  data-aos="fade-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia corporis soluta adipisci modi? Consequatur debitis ipsa fugit culpa, nisi recusandae.</p>
                 </div>
                 
     </section>
 
     <section class="p-12" style="background:#000;">
-        <div class="flex justify-center flex-col items-center">
+        <div class="flex justify-center flex-col items-center" id="token"  data-aos="fade-up">
             <h1 class="text-center text-white text-[30px]">TOKENOMICS</h1>
     
         </div>
@@ -120,7 +139,7 @@
 
 
 <section class="p-12" style="background-image: url(/bg-3.png); background-size: contain;">
-    <div class="flex justify-center flex-col items-center">
+    <div class="flex justify-center flex-col items-center" id="join">
         <h1 class="text-center text-white text-[30px]">JOIN COMMUNITY</h1>
         <p class="text-white text-[25px] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia corporis soluta adipisci modi? Consequatur debitis ipsa fugit culpa, nisi recusandae.</p>
         <a href="" class="bg-white px-4 text-[15px] text-center py-2 rounded-xl" style="font-family: head;"> Join</a>
@@ -139,5 +158,9 @@
     
                 </p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
